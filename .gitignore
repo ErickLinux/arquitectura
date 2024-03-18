@@ -2,4 +2,3 @@ local_pgdata/
 pgadmin-data/
 node_modules/
 package-lock.json
-.env
