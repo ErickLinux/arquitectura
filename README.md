@@ -13,7 +13,9 @@ Comandos importantes:
 5. npx prisma migrate
 6. npm run dev
 
+cargar el archivo docker-compose up -d
 
+npx prisma migrate dev
 
 
 

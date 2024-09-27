@@ -13,16 +13,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model usuarios {
+model datos {
 id Int @id @default(autoincrement())
-nombre String
-apellido String
+nombrecompleto String
+correouniversidad String
+carne String
+latitud String
+longitud String
+humedad Float
+temperatura Float
 }
 
-model sensor {
-id Int @id @default(autoincrement())
-value Decimal
-device String
-ip String
-date DateTime @default(now())
+model Estado {
+    id         Int      @id @default(autoincrement()) // Campo de ID autoincremental
+    estado     Boolean   // Campo para el estado
+    fecha_hora DateTime @default(now()) // Campo para la fecha y hora, con valor por defecto de la fecha y hora actuales
 }
+

@@ -1,4 +1,4 @@
-version: "3.8" #
+version: "3.8"
 services:
   db:
     image: postgres
@@ -8,7 +8,7 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: umgcobanthebest
+      POSTGRES_PASSWORD: admin  
     volumes:
       - ./local_pgdata:/var/lib/postgresql/data
   pgadmin:
@@ -18,7 +18,7 @@ services:
     ports:
       - "8888:80"
     environment:
-      PGADMIN_DEFAULT_EMAIL: dmusn1@miumg.edu.gt
+      PGADMIN_DEFAULT_EMAIL: elviismoralez@gmail.com  
       PGADMIN_DEFAULT_PASSWORD: sistemas
     volumes:
       - ./pgadmin-data:/var/lib/pgadmin
@@ -27,7 +27,7 @@ services:
     container_name: grafana
     restart: unless-stopped
     ports:
-     - '3004:3000' 
+      - '3004:3000' 
 
 volumes:
   local_pgdata:
